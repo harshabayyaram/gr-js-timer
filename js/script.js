@@ -7,9 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const resetBtn = document.querySelector('.reset');
   
     let countdownInterval;
-    let days = 0, hours = 0, minutes = 0, seconds = 0; // Initialize timer values
+    let days = 0, hours = 0, minutes = 0, seconds = 0;
   
-    // Function to update the timer display
     function updateTimerDisplay() {
       timerBoxes.forEach((box, index) => {
         const timeElement = box.querySelector('.time');
@@ -33,8 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         timeElement.textContent = value;
       });
     }
-  
-    // Function to start the timer
+
     function startTimer() {
       countdownInterval = setInterval(() => {
         if (seconds > 0) {
@@ -55,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 minutes = 59;
                 seconds = 59;
               } else {
-                // Timer has reached 0, perform any desired action here
                 clearInterval(countdownInterval);
                 console.log('Timer finished!');
                 return;
@@ -63,17 +60,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           }
         }
-        // Update the timer display after each second
         updateTimerDisplay();
       }, 1000);
     }
   
-    // Function to pause the timer
     function pauseTimer() {
       clearInterval(countdownInterval);
     }
   
-    // Function to reset the timer values
     function resetTimer() {
       clearInterval(countdownInterval);
       days = 0;
@@ -83,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
       updateTimerDisplay();
     }
   
-    // Event listener for the "Set Timer" button
     setTimerBtn.addEventListener('click', () => {
       days = parseInt(inputFields[0].value) || 0;
       hours = parseInt(inputFields[1].value) || 0;
@@ -92,19 +85,15 @@ document.addEventListener('DOMContentLoaded', function() {
       updateTimerDisplay();
     });
   
-    // Event listener for the "Start/Resume" button
     startBtn.addEventListener('click', () => {
       startTimer();
     });
   
-    // Event listener for the "Pause" button
     pauseBtn.addEventListener('click', () => {
       pauseTimer();
     });
   
-    // Event listener for the "Reset" button
     resetBtn.addEventListener('click', () => {
       resetTimer();
     });
   });
-  
