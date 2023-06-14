@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+}
+
+
+header{
+    background-color: #090041;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+}
+nav .logo{
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav .logo img{
+    height: 3rem;
+    width: 3rem;
+    color: white;
+}
+
+nav .logo p{
+    margin: 1rem;
+    color: white;
+}
+
+nav .menu ul{
+    display: flex;
+    flex-direction: row;
+}
+
+nav .menu ul li{
+    list-style: none;
+    margin: 2rem;
+    color: white;
+}
+
+
+main{
+    background-color: #40baed;
+}
+
+main .inst{
+    background-color: blue;
+    margin: 2rem;
+
+}
+main .inst a{
+    text-decoration: none;
+    color: white;
+
+}
+
+
+main .timer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem;
+    width: auto;
+    
+}
+
+main .timer .box{
+    margin-top: 1rem;
+    /* margin-left: 7rem; */
+}
+
+main .timer .days{
+    background-color: #090041;
+    color: white;
+    /* height: 10rem; */
+    width: 10rem;
+    border-radius: 1rem;
+    /* display: flex;
+    justify-content: center; */
+    /* margin-top: 1rem;*/
+    margin-left: 5rem; 
+}
+
+main .timer .days .num .time{
+    font-size: 8rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+main .timer .days .num .sub{
+    font-size: 2rem;
+    text-align: center;
+}
+
+main .timer .box .textbox{
+    width: 10rem;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+main .timer .box .textbox input{
+    width: 4rem;
+    height: 2rem;
+
+}
+
+main .buttons{
+    text-align: center;
+}
+
+main .buttons button{
+    margin: 3rem 0rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 0.5rem;
+}
+
+main .buttons .settimer{
+    background-color: #090041;
+}
+main .buttons .start{
+    background-color: #b220fb;
+}
+main .buttons .pause{
+    background-color: #0d6aff;
+}
+main .buttons .reset{
+    background-color: #ff0000;
+}
+
+
+footer{
+    background-color: #090041;
+    color: white;
+}
+footer h3{
+    padding: 1rem;
+    margin-left: 2rem;
+}
